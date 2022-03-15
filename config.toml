@@ -1,0 +1,98 @@
+# baseURL = 'http://example.org/'
+# languageCode = 'en-us'
+# title = 'My New Hugo Site'
+
+baseURL = "https://qinruim.github.io/"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "QRm的博客"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "DoIt"
+
+[params]
+  # DoIt 主题版本
+  version = "0.2.X"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+
+# 作者的社交信息设置
+
+
+
+
+[params.home]
+        # DoIt 新增 | 0.2.0 RSS 文章数目
+        rss = 10
+        # 主页个人信息
+        [params.home.profile]
+          enable = true
+          # Gravatar 邮箱, 用于优先在主页显示的头像
+         # gravatarEmail = ""
+          # 主页显示头像的 URL
+          # 将你的头像文件放置于 static 或者 assets 目录下
+          # 文件路径是相对于 static 或者 assets 目录的
+          avatarURL = "/images/avatar.png"
+          # DoIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
+          title = ""
+          # 主页显示的网站副标题
+          subtitle = "QinRuim's blog"
+          # 是否为副标题显示打字机动画
+          typeit = true
+          # 是否显示社交账号
+          social = true
+          # DoIt 新增 | 0.2.0 免责声明 (支持 HTML 格式)
+          disclaimer = "dddd"
+        # 主页文章列表
+        [params.home.posts]
+              enable = true
+              # 主页每页显示文章数量
+              paginate = 6
+              # DoIt 删除 | 0.2.0 被 params.page 中的 hiddenFromHomePage 替代
+              # 当你没有在文章前置参数中设置 "hiddenFromHomePage" 时的默认行为
+              defaultHiddenFromHomePage = false
+
+
+[params.social]
+     GitHub = "https://github.com/qinruim"
+     Email = "mqinrui@163.com"
+     RSS = true # DoIt 新增 | 0.2.0
