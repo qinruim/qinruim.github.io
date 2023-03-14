@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>nginx小坑 - qinruim的笔记本</title><meta name="Description" content="nginx小坑"><meta property="og:title" content="nginx小坑" />
+<meta property="og:description" content="nginx小坑" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/" /><meta property="og:image" content="https://qinruim.github.io/images/paqia.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-11T16:29:09+08:00" />
+<meta property="article:modified_time" content="2023-03-11T16:29:09+08:00" /><meta property="og:site_name" content="qinruim的笔记本" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://qinruim.github.io/images/paqia.jpg"/>
+
+<meta name="twitter:title" content="nginx小坑"/>
+<meta name="twitter:description" content="nginx小坑"/>
+<meta name="application-name" content="qinruim的笔记本">
+<meta name="apple-mobile-web-app-title" content="qinruim的笔记本">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/paqia.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "nginx小坑",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/qinruim.github.io\/nginx%E5%B0%8F%E8%AE%B0\/"
+        },"genre": "posts","keywords": "java, nginx","wordcount":  1239 ,
+        "url": "https:\/\/qinruim.github.io\/nginx%E5%B0%8F%E8%AE%B0\/","datePublished": "2023-03-11T16:29:09+08:00","dateModified": "2023-03-11T16:29:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": "qinruim"},"author": {
+                "@type": "Person",
+                "name": "qinruim"
+            },"description": "nginx小坑"
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="qinruim的笔记本"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="qinruim的笔记本"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="#" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1nginx">1.nginx</a>
+      <ul>
+        <li><a href="#安装nginx">安装nginx：</a></li>
+        <li><a href="#安装ufw">安装ufw:</a></li>
+        <li><a href="#nginx默认位置">nginx默认位置：</a></li>
+        <li><a href="#将前端项目部署到nginx">将前端项目部署到nginx：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">nginx小坑</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">qinruim</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>java学习记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-11">2023-03-11</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-03-11">2023-03-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1239 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1nginx">1.nginx</a>
+      <ul>
+        <li><a href="#安装nginx">安装nginx：</a></li>
+        <li><a href="#安装ufw">安装ufw:</a></li>
+        <li><a href="#nginx默认位置">nginx默认位置：</a></li>
+        <li><a href="#将前端项目部署到nginx">将前端项目部署到nginx：</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="nginx小坑" class="headerLink">
+    <a href="#nginx%e5%b0%8f%e5%9d%91" class="header-mark"></a>nginx小坑</h1><h2 id="1nginx" class="headerLink">
+    <a href="#1nginx" class="header-mark"></a>1.nginx</h2><h3 id="安装nginx" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85nginx" class="header-mark"></a>安装nginx：</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看nginx状态：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl status nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>需要配置防火墙，否则无法访问80和443端口，使用ufw评为配置</p>
+<h3 id="安装ufw" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85ufw" class="header-mark"></a>安装ufw:</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo apt install ufw
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看ufw状态：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo ufw status
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>启用 ‘Nginx Full’ profile，它包含了80和443这两个端口：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo ufw allow <span class="s1">&#39;Nginx Full&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过以下命令来启动UFW服务并使其在启动时启动（一般在完成默认配置后再重启）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="nginx默认位置" class="headerLink">
+    <a href="#nginx%e9%bb%98%e8%ae%a4%e4%bd%8d%e7%bd%ae" class="header-mark"></a>nginx默认位置：</h3><ul>
+<li>所有的 Nginx 配置文件都在<code>/etc/nginx/</code>目录下。</li>
+<li>主要的 Nginx 配置文件是<code>/etc/nginx/nginx.conf</code>。</li>
+<li>为每个域名创建一个独立的配置文件，便于维护服务器。你可以按照需要定义任意多的 block 文件。</li>
+<li>Nginx 服务器配置文件被储存在<code>/etc/nginx/sites-available</code>目录下。在<code>/etc/nginx/sites-enabled</code>目录下的配置文件都将被 Nginx 使用。</li>
+<li>最佳推荐是使用标准的命名方式。例如，如果你的域名是<code>mydomain.com</code>，那么配置文件应该被命名为<code>/etc/nginx/sites-available/mydomain.com.conf</code></li>
+<li>如果你在域名服务器配置块中有可重用的配置段，把这些配置段摘出来，做成一小段可重用的配置。</li>
+<li>Nginx 日志文件(access.log 和 error.log)定位在<code>/var/log/nginx/</code>目录下。推荐为每个服务器配置块，配置一个不同的<code>access</code>和<code>error</code>。</li>
+</ul>
+<p>启动是可能报错：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nginx: <span class="o">[</span>alert<span class="o">]</span> could not open error log file: open<span class="o">()</span> <span class="s2">&#34;/var/log/nginx/error.log&#34;</span> failed <span class="o">(</span>13: Permission denied<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>原因是没有访问该文件的权限，设置权限即可：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo chmod <span class="m">777</span> /var/log/nginx/error.log
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>直接将/var/log/nginx路径修改权限也可</p>
+<p>常见权限意义：</p>
+<p>-rw&mdash;&mdash;- (600) 只有所有者才有读和写的权限
+-rw-r–r&ndash; (644) 只有所有者才有读和写的权限，组群和其他人只有读的权限
+-rwx&mdash;&mdash; (700) 只有所有者才有读，写，执行的权限
+-rwxr-xr-x (755) 只有所有者才有读，写，执行的权限，组群和其他人只有读和执行的权限
+-rwx–x&ndash;x (711) 只有所有者才有读，写，执行的权限，组群和其他人只有执行的权限
+-rw-rw-rw- (666) 每个人都有读写的权限
+-rwxrwxrwx (777) 每个人都有读写和执行的权限</p>
+<h3 id="将前端项目部署到nginx" class="headerLink">
+    <a href="#%e5%b0%86%e5%89%8d%e7%ab%af%e9%a1%b9%e7%9b%ae%e9%83%a8%e7%bd%b2%e5%88%b0nginx" class="header-mark"></a>将前端项目部署到nginx：</h3><p>解压资料中的nginx-1.18.0压缩包，复制</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">./html/hdmp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>文件夹，即前端项目，粘贴到自己项目路径，我的是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">/mnt/windows_D/data/java/redis-hmdp/hmdp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后配置nginx</p>
+<p>1.备份配置文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">cd</span> /etc/nginx
+</span></span><span class="line"><span class="cl">cp nginx.conf nginx.conf.bak
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编辑配置文件nginx.conf，使用前面压缩包里面的nginx.conf，略作修改后替代：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo vim ./nginx.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>关键：将项目的根目录所在路径作为 location / 的 root 对应的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">worker_processes  1;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">events {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">worker_connections  1024;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">http {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">include       mime.types;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">default_type  application/json;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">sendfile        on;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">keepalive_timeout  65;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">server {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">listen       8080;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">server_name  localhost;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c"># 指定前端项目所在的位置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">location / {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">root   /mnt/windows_D/data/java/redis-hmdp/hmdp;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">index  index.html index.htm;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">error_page   500 502 503 504  /50x.html;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">location = /50x.html {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">root   html;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">location /api {  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">default_type  application/json;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c">#internal;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">keepalive_timeout   30s;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">keepalive_requests  1000;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c">#支持keep-alive  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">proxy_http_version 1.1;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">rewrite /api(/.*) $1 break;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">proxy_pass_request_headers on;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c">#more_clear_input_headers Accept-Encoding;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">proxy_next_upstream error timeout;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="l">proxy_pass http://127.0.0.1:8081;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c">#proxy_pass http://backend;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">upstream backend {</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">server 127.0.0.1:8081 max_fails=5 fail_timeout=10s weight=1;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c">#server 127.0.0.1:8082 max_fails=5 fail_timeout=10s weight=1;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>}<span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>}<span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>保存退出</p>
+<p>检查配置较，重新加载配置，重启nginx：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nginx -t 
+</span></span><span class="line"><span class="cl">nginx -s reload
+</span></span><span class="line"><span class="cl">service nginx restart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>启动后，访问http://127.0.0.1:8080</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-03-11</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/nginx%E5%B0%8F%E8%AE%B0/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/nginx/">nginx</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.102.3">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">qinruim</a></span>&nbsp;|&nbsp;<span class="license">本博客所有文章除特別声明外，均采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0 </a> 许可协议，转载请注明出处。</span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":42},"comment":{},"data":{"desktop-header-typeit":"qinruim的笔记本","mobile-header-typeit":"qinruim的笔记本"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

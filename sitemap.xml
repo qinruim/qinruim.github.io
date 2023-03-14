@@ -2,8 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://qinruim.github.io/posts/first_post/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod></url><url>
-            <loc>https://qinruim.github.io/posts/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod></url><url>
-            <loc>https://qinruim.github.io/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod></url><url>
-            <loc>https://qinruim.github.io/categories/</loc></url><url>
-            <loc>https://qinruim.github.io/tags/</loc></url></urlset>
+            <loc>https://qinruim.github.io/categories/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/tags/java/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/categories/java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/tags/nginx/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/posts/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/tags/</loc><lastmod>2023-03-11T16:29:09&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qinruim.github.io/about/</loc><lastmod>2021-11-24T22:08:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://qinruim.github.io/authors/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://qinruim.github.io/series/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

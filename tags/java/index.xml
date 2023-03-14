@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>qinruim的笔记本</title>
-        <link>https://qinruim.github.io/</link>
-        <description>We will...</description>
+        <title>java - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/java/</link>
+        <description>java - 标签 - qinruim的笔记本</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
-            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Sat, 11 Mar 2023 16:29:09 &#43;0800</lastBuildDate>
-            <atom:link href="https://qinruim.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Sat, 11 Mar 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
     <title>nginx小坑</title>
     <link>https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/</link>
     <pubDate>Sat, 11 Mar 2023 16:29:09 &#43;0800</pubDate><author>
