@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Pop!_OS - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/pop_os/</link>
+        <description>Pop!_OS - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/pop_os/" rel="self" type="application/rss+xml" /><item>
+    <title>op!_OS系统安装</title>
+    <link>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[Pop!_OS，Windows10双系统安装笔记本自带Win10，由于电脑配置一般，当多开应用以及需要加载一些大文件是电脑时常出现卡顿，因此]]></description>
+</item></channel>
+</rss>

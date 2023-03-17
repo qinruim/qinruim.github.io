@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>op!_OS系统安装 - qinruim的笔记本</title><meta name="Description" content="Linux系统安装"><meta property="og:title" content="op!_OS系统安装" />
+<meta property="og:description" content="Linux系统安装" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" /><meta property="og:image" content="https://qinruim.github.io/images/paqia.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-10T15:29:09+08:00" />
+<meta property="article:modified_time" content="2022-09-10T15:29:09+08:00" /><meta property="og:site_name" content="qinruim的笔记本" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://qinruim.github.io/images/paqia.jpg"/>
+
+<meta name="twitter:title" content="op!_OS系统安装"/>
+<meta name="twitter:description" content="Linux系统安装"/>
+<meta name="application-name" content="qinruim的笔记本">
+<meta name="apple-mobile-web-app-title" content="qinruim的笔记本">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/paqia.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/" /><link rel="next" href="https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "op!_OS系统安装",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/qinruim.github.io\/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85\/"
+        },"genre": "posts","keywords": "Linux, Pop!_OS","wordcount":  1324 ,
+        "url": "https:\/\/qinruim.github.io\/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85\/","datePublished": "2022-09-10T15:29:09+08:00","dateModified": "2022-09-10T15:29:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": "qinruim"},"author": {
+                "@type": "Person",
+                "name": "qinruim"
+            },"description": "Linux系统安装"
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="qinruim的笔记本"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="qinruim的笔记本"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="#" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#pop_os简介">Pop!_OS简介</a></li>
+    <li><a href="#开始安装">开始安装</a>
+      <ul>
+        <li><a href="#1制作启动盘">1.制作启动盘</a></li>
+        <li><a href="#2在win10系统下进行磁盘分区">2.在Win10系统下进行磁盘分区</a></li>
+        <li><a href="#3重启进入bios">3.重启进入BIOS</a></li>
+        <li><a href="#4选择语言等设置">4.选择语言等设置</a></li>
+        <li><a href="#5分区">5.分区</a></li>
+        <li><a href="#6配置各个分区的挂载内容">6.配置各个分区的挂载内容</a></li>
+        <li><a href="#7分配完成后">7.分配完成后</a></li>
+        <li><a href="#8重启进入pop_os">8.重启进入Pop!_OS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">op!_OS系统安装</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">qinruim</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/linux%E7%8E%A9%E8%80%8D%E8%AE%B0%E5%BD%95/"><i class="far fa-folder fa-fw"></i>linux玩耍记录</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-09-10">2022-09-10</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2022-09-10">2022-09-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1324 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#pop_os简介">Pop!_OS简介</a></li>
+    <li><a href="#开始安装">开始安装</a>
+      <ul>
+        <li><a href="#1制作启动盘">1.制作启动盘</a></li>
+        <li><a href="#2在win10系统下进行磁盘分区">2.在Win10系统下进行磁盘分区</a></li>
+        <li><a href="#3重启进入bios">3.重启进入BIOS</a></li>
+        <li><a href="#4选择语言等设置">4.选择语言等设置</a></li>
+        <li><a href="#5分区">5.分区</a></li>
+        <li><a href="#6配置各个分区的挂载内容">6.配置各个分区的挂载内容</a></li>
+        <li><a href="#7分配完成后">7.分配完成后</a></li>
+        <li><a href="#8重启进入pop_os">8.重启进入Pop!_OS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="pop_oswindows10双系统安装" class="headerLink">
+    <a href="#pop_oswindows10%e5%8f%8c%e7%b3%bb%e7%bb%9f%e5%ae%89%e8%a3%85" class="header-mark"></a>Pop!_OS，Windows10双系统安装</h1><p>笔记本自带Win10，由于电脑配置一般，当多开应用以及需要加载一些大文件是电脑时常出现卡顿，因此开始考虑安装Linux系统。但由于还需保留Win10系统娱乐使用以及以防万一，因此决定安装Win10和Pop!_OS双系统。</p>
+<p>其实在此之前已经在朋友的帮助下完成过基于Arch的Manjaro系统的安装，出于对其滚动更新的忧虑，以及软件兼容性的考虑，此次决定安装基于Ubantu的Pop!_OS。</p>
+<p>历经各种资料查阅和实际操作，安装途中也踩了一些坑，为了提醒自己，所以记录一下安装过程。</p>
+<h2 id="pop_os简介" class="headerLink">
+    <a href="#pop_os%e7%ae%80%e4%bb%8b" class="header-mark"></a>Pop!_OS简介</h2><p>1.Pop！_OS是基于Ubuntu的免费开源Linux发行版，有什么问题搜ubuntu也能找到解决方案。</p>
+<p>2.具有自定义GNOME桌面。为AMD和Nvidia GPU提供了全面的开箱即用支持。</p>
+<p>3.具有很好的自动网格布局。</p>
+<p>4。Pop!_OS比Ubuntu和Manjaro GNOME都纯净，预装软件更少。</p>
+<h2 id="开始安装" class="headerLink">
+    <a href="#%e5%bc%80%e5%a7%8b%e5%ae%89%e8%a3%85" class="header-mark"></a>开始安装</h2><h3 id="1制作启动盘" class="headerLink">
+    <a href="#1%e5%88%b6%e4%bd%9c%e5%90%af%e5%8a%a8%e7%9b%98" class="header-mark"></a>1.制作启动盘</h3><p>到<a href="https://pop.system76.com/" target="_blank" rel="noopener noreferrer">Pop!_OS下载页面</a>下载镜像文件</p>
+<p>建议下载LTS版本，根据自己电脑是否有NVIDIA独显选择合适的版本</p>
+<p><a class="lightgallery" href="images/image-20230318003828256.png" title="image-20230318003828256" data-thumbnail="images/image-20230318003828256.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318003828256.png"
+            srcset="images/image-20230318003828256.png, images/image-20230318003828256.png 1.5x, images/image-20230318003828256.png 2x"
+            sizes="auto"
+            alt="images/image-20230318003828256.png">
+    </a></p>
+<p>下载完成后制作启动盘，可以使用rufus、Etcher等软件制作，全凭个人喜好</p>
+<p>插入u盘，运行rufus软件，点击选择刚刚下载镜像文件和u盘，点击制作即可。</p>
+<h3 id="2在win10系统下进行磁盘分区" class="headerLink">
+    <a href="#2%e5%9c%a8win10%e7%b3%bb%e7%bb%9f%e4%b8%8b%e8%bf%9b%e8%a1%8c%e7%a3%81%e7%9b%98%e5%88%86%e5%8c%ba" class="header-mark"></a>2.在Win10系统下进行磁盘分区</h3><p>进入磁盘管理，选择你早已准备好的一块空白区域，右键，压缩卷得到一块空白分区（压缩后会显示未分配），具体多大根据你实际情况来，硬盘空间大则多给一点，不够则少给一点，如图所示：</p>
+<p><a class="lightgallery" href="images/image-20230318005118767.png" title="image-20230318005118767" data-thumbnail="images/image-20230318005118767.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318005118767.png"
+            srcset="images/image-20230318005118767.png, images/image-20230318005118767.png 1.5x, images/image-20230318005118767.png 2x"
+            sizes="auto"
+            alt="images/image-20230318005118767.png">
+    </a></p>
+<h3 id="3重启进入bios" class="headerLink">
+    <a href="#3%e9%87%8d%e5%90%af%e8%bf%9b%e5%85%a5bios" class="header-mark"></a>3.重启进入BIOS</h3><p>搜索引擎搜一下自己的电脑怎么进入BIOS，不同品牌的主板有所区别。</p>
+<p>进入BIOS之后，找到启动选项，选择USB启动开始安装。</p>
+<h3 id="4选择语言等设置" class="headerLink">
+    <a href="#4%e9%80%89%e6%8b%a9%e8%af%ad%e8%a8%80%e7%ad%89%e8%ae%be%e7%bd%ae" class="header-mark"></a>4.选择语言等设置</h3><p>不出意外的话，此时电脑就会载入启动盘的引导系统，按提示选择语言，建议选择英语，以免安装后文件夹默认是中文，影响使用。要使用中文可以在安装完成之后进入系统设置更改语言。</p>
+<p>然后选择Custom安装，如图所示：</p>
+<p><a class="lightgallery" href="images/image-20230318010456720.png" title="image-20230318010456720" data-thumbnail="images/image-20230318010456720.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318010456720.png"
+            srcset="images/image-20230318010456720.png, images/image-20230318010456720.png 1.5x, images/image-20230318010456720.png 2x"
+            sizes="auto"
+            alt="images/image-20230318010456720.png">
+    </a></p>
+<h3 id="5分区" class="headerLink">
+    <a href="#5%e5%88%86%e5%8c%ba" class="header-mark"></a>5.分区</h3><p>然后点击左下角modify partitions进入分区界面。</p>
+<p><a class="lightgallery" href="images/image-20230318010831686.png" title="image-20230318010831686" data-thumbnail="images/image-20230318010831686.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318010831686.png"
+            srcset="images/image-20230318010831686.png, images/image-20230318010831686.png 1.5x, images/image-20230318010831686.png 2x"
+            sizes="auto"
+            alt="images/image-20230318010831686.png">
+    </a></p>
+<p>会看到前面分出来的空白区域，右键选择new或者点击左上角创建新分区</p>
+<p>首先分出至少512MB的EFI启动分区，file system选择fat32：</p>
+<p><a class="lightgallery" href="images/image-20230318011132141.png" title="image-20230318011132141" data-thumbnail="images/image-20230318011132141.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318011132141.png"
+            srcset="images/image-20230318011132141.png, images/image-20230318011132141.png 1.5x, images/image-20230318011132141.png 2x"
+            sizes="auto"
+            alt="images/image-20230318011132141.png">
+    </a></p>
+<p>然后分出swap分区，大小建议跟自己电脑一样内存一样，file system选择linux-swap</p>
+<p>然后分出操作系统根目录（/），用户目录（home）大小自己根据实际情况确定，file system都选择ext4</p>
+<p>确认后，点击工具栏确认按钮，提交分区计划，完成之后带你接close</p>
+<h3 id="6配置各个分区的挂载内容" class="headerLink">
+    <a href="#6%e9%85%8d%e7%bd%ae%e5%90%84%e4%b8%aa%e5%88%86%e5%8c%ba%e7%9a%84%e6%8c%82%e8%bd%bd%e5%86%85%e5%ae%b9" class="header-mark"></a>6.配置各个分区的挂载内容</h3><p>点击use partition</p>
+<p>512M的EFI分区：<a class="lightgallery" href="images/image-20230318011821341.png" title="image-20230318011821341" data-thumbnail="images/image-20230318011821341.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318011821341.png"
+            srcset="images/image-20230318011821341.png, images/image-20230318011821341.png 1.5x, images/image-20230318011821341.png 2x"
+            sizes="auto"
+            alt="images/image-20230318011821341.png">
+    </a></p>
+<p>swap分区：<a class="lightgallery" href="images/image-20230318011836444.png" title="image-20230318011836444" data-thumbnail="images/image-20230318011836444.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318011836444.png"
+            srcset="images/image-20230318011836444.png, images/image-20230318011836444.png 1.5x, images/image-20230318011836444.png 2x"
+            sizes="auto"
+            alt="images/image-20230318011836444.png">
+    </a></p>
+<p>root（/）分区：</p>
+<p><a class="lightgallery" href="images/image-20230318011900117.png" title="image-20230318011900117" data-thumbnail="images/image-20230318011900117.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318011900117.png"
+            srcset="images/image-20230318011900117.png, images/image-20230318011900117.png 1.5x, images/image-20230318011900117.png 2x"
+            sizes="auto"
+            alt="images/image-20230318011900117.png">
+    </a></p>
+<p>用户目录（home）：</p>
+<p><a class="lightgallery" href="images/image-20230318011933486.png" title="image-20230318011933486" data-thumbnail="images/image-20230318011933486.png">
+        <img
+            
+            loading="lazy"
+            src="images/image-20230318011933486.png"
+            srcset="images/image-20230318011933486.png, images/image-20230318011933486.png 1.5x, images/image-20230318011933486.png 2x"
+            sizes="auto"
+            alt="images/image-20230318011933486.png">
+    </a></p>
+<h3 id="7分配完成后" class="headerLink">
+    <a href="#7%e5%88%86%e9%85%8d%e5%ae%8c%e6%88%90%e5%90%8e" class="header-mark"></a>7.分配完成后</h3><p>点击左下角Erase and Install，输入账号密码开始安装</p>
+<h3 id="8重启进入pop_os" class="headerLink">
+    <a href="#8%e9%87%8d%e5%90%af%e8%bf%9b%e5%85%a5pop_os" class="header-mark"></a>8.重启进入Pop!_OS</h3><p>重启进入Pop!_OS之后，由于Pop_OS!默认不带GRUB，这一点不如Manjaro，需要手动安装GRUB，否则启动电脑时不能选择系统，无法使用Windows10系统</p>
+<p>[Pop_OS!的GRUB安装教程](<a href="https://jacci.net/linux/pop-os/how-to-install-grub-on-pop-os-20-04/" target="_blank" rel="noopener noreferrer">How to Install grub on POP OS 20.04 – Jacci.Net</a>)</p>
+<p>现在就可以愉快使用Pop!_OS啦！</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-09-10</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/linux/">Linux</a>,&nbsp;<a href="/tags/pop_os/">Pop!_OS</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/nginx%E5%B0%8F%E8%AE%B0/" class="next" rel="next" title="nginx小坑">nginx小坑<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.102.3">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">qinruim</a></span>&nbsp;|&nbsp;<span class="license">本博客所有文章除特別声明外，均采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0 </a> 许可协议，转载请注明出处。</span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":42},"comment":{},"data":{"desktop-header-typeit":"qinruim的笔记本","mobile-header-typeit":"qinruim的笔记本"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

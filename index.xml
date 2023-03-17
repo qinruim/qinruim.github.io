@@ -13,5 +13,12 @@
         <name>qinruim</name>
     </author><guid>https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/</guid>
     <description><![CDATA[nginx小坑 1.nginx 安装nginx： 1 sudo apt install nginx 查看nginx状态： 1 systemctl status nginx 需要配置防火墙，否则无法访问80和443端口，使用ufw评为配置 安装u]]></description>
+</item><item>
+    <title>op!_OS系统安装</title>
+    <link>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
+    <pubDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
+    <description><![CDATA[Pop!_OS，Windows10双系统安装笔记本自带Win10，由于电脑配置一般，当多开应用以及需要加载一些大文件是电脑时常出现卡顿，因此]]></description>
 </item></channel>
 </rss>
