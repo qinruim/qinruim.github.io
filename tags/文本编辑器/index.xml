@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>文本编辑器 - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+        <description>文本编辑器 - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Wed, 12 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://qinruim.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>Vim 简介</title>
+    <link>https://qinruim.github.io/vim/</link>
+    <pubDate>Wed, 12 Oct 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/vim/</guid>
+    <description><![CDATA[<p>最近简单了解了一下 Vim，不免对这个上古神器的强大感到震撼。这篇文章简要记录下基本操作，只能说是冰山一角。</p>]]></description>
+</item></channel>
+</rss>

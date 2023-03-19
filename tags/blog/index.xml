@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Blog - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/blog/</link>
+        <description>Blog - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Tue, 19 Apr 2022 10:41:42 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>使用Hugo搭建博客并部署</title>
+    <link>https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/</link>
+    <pubDate>Tue, 19 Apr 2022 10:41:42 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[使用Hugo搭建博客并部署（Dolt主题） 概述Hugo是一个静态网站生成工具，可以用来方便、低成本地搭建一个个人博客。使用Hugo的理由： 1]]></description>
+</item></channel>
+</rss>

@@ -12,11 +12,39 @@
     </author><guid>https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/</guid>
     <description><![CDATA[nginx小坑 1.nginx 安装nginx： 1 sudo apt install nginx 查看nginx状态： 1 systemctl status nginx 需要配置防火墙，否则无法访问80和443端口，使用ufw评为配置 安装u]]></description>
 </item><item>
-    <title>op!_OS系统安装</title>
+    <title>Git 版本控制</title>
+    <link>https://qinruim.github.io/learngit/</link>
+    <pubDate>Wed, 30 Nov 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/learngit/</guid>
+    <description><![CDATA[<p>Git 是一个专业的版本控制软件，既可以管理个人文档，也可以进行团队协作。本文尽可能介绍概念性的原理以便理解，以供有需要的同学们快速查阅。</p>]]></description>
+</item><item>
+    <title>Vim 简介</title>
+    <link>https://qinruim.github.io/vim/</link>
+    <pubDate>Wed, 12 Oct 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/vim/</guid>
+    <description><![CDATA[<p>最近简单了解了一下 Vim，不免对这个上古神器的强大感到震撼。这篇文章简要记录下基本操作，只能说是冰山一角。</p>]]></description>
+</item><item>
+    <title>Pop!_OS系统安装</title>
     <link>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</pubDate><author>
         <name>qinruim</name>
     </author><guid>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</guid>
     <description><![CDATA[Pop!_OS，Windows10双系统安装笔记本自带Win10，由于电脑配置一般，当多开应用以及需要加载一些大文件是电脑时常出现卡顿，因此]]></description>
+</item><item>
+    <title>Zotero 文献管理</title>
+    <link>https://qinruim.github.io/zotero/</link>
+    <pubDate>Fri, 20 May 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/zotero/</guid>
+    <description><![CDATA[<p>说到文献管理软件，大家可能或多或少听说过 <a href="https://endnote.com/" target="_blank" rel="noopener noreferrer">EndNote</a> 或 <a href="http://www.inoteexpress.com/" target="_blank" rel="noopener noreferrer">NoteExpress</a> ，这里再跟大家分享 <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer">Zotero</a>，旨在提供一个新的选择，分享开源的强大。这篇文章主要介绍文献管理软件 Zotero 的基本用法，包括：添加题录、获取原文、添加笔记、文献引用、文档整理和数据同步。为了增强数据同步功能，本文还将对坚果云进行补充介绍。</p>]]></description>
+</item><item>
+    <title>使用Hugo搭建博客并部署</title>
+    <link>https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/</link>
+    <pubDate>Tue, 19 Apr 2022 10:41:42 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/</guid>
+    <description><![CDATA[使用Hugo搭建博客并部署（Dolt主题） 概述Hugo是一个静态网站生成工具，可以用来方便、低成本地搭建一个个人博客。使用Hugo的理由： 1]]></description>
 </item></channel>
 </rss>

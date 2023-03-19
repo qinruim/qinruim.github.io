@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Zotero - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/zotero/</link>
+        <description>Zotero - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Fri, 20 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://qinruim.github.io/tags/zotero/" rel="self" type="application/rss+xml" /><item>
+    <title>Zotero 文献管理</title>
+    <link>https://qinruim.github.io/zotero/</link>
+    <pubDate>Fri, 20 May 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/zotero/</guid>
+    <description><![CDATA[<p>说到文献管理软件，大家可能或多或少听说过 <a href="https://endnote.com/" target="_blank" rel="noopener noreferrer">EndNote</a> 或 <a href="http://www.inoteexpress.com/" target="_blank" rel="noopener noreferrer">NoteExpress</a> ，这里再跟大家分享 <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer">Zotero</a>，旨在提供一个新的选择，分享开源的强大。这篇文章主要介绍文献管理软件 Zotero 的基本用法，包括：添加题录、获取原文、添加笔记、文献引用、文档整理和数据同步。为了增强数据同步功能，本文还将对坚果云进行补充介绍。</p>]]></description>
+</item></channel>
+</rss>

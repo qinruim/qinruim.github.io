@@ -4,8 +4,15 @@
         <link>https://qinruim.github.io/categories/linux%E7%8E%A9%E8%80%8D%E8%AE%B0%E5%BD%95/</link>
         <description>linux玩耍记录 - 分类 - qinruim的笔记本</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
-            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/categories/linux%E7%8E%A9%E8%80%8D%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
-    <title>op!_OS系统安装</title>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Wed, 12 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://qinruim.github.io/categories/linux%E7%8E%A9%E8%80%8D%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml" /><item>
+    <title>Vim 简介</title>
+    <link>https://qinruim.github.io/vim/</link>
+    <pubDate>Wed, 12 Oct 2022 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/vim/</guid>
+    <description><![CDATA[<p>最近简单了解了一下 Vim，不免对这个上古神器的强大感到震撼。这篇文章简要记录下基本操作，只能说是冰山一角。</p>]]></description>
+</item><item>
+    <title>Pop!_OS系统安装</title>
     <link>https://qinruim.github.io/pop_os%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/</link>
     <pubDate>Sat, 10 Sep 2022 15:29:09 &#43;0800</pubDate><author>
         <name>qinruim</name>
