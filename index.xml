@@ -48,5 +48,19 @@
         <name>qinruim</name>
     </author><guid>https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/</guid>
     <description><![CDATA[使用Hugo搭建博客并部署（Dolt主题） 概述Hugo是一个静态网站生成工具，可以用来方便、低成本地搭建一个个人博客。使用Hugo的理由： 1]]></description>
+</item><item>
+    <title></title>
+    <link>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
+    <description><![CDATA[Java集合详解 架构图 集合的简单分类1.collection: List接口：一种有序列表的集合，例如，按索引排列的Student的List；]]></description>
+</item><item>
+    <title></title>
+    <link>https://qinruim.github.io/pushpopofferpolladd/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/pushpopofferpolladd/</guid>
+    <description><![CDATA[push()、pop()、offer()、poll()、add()以前以为Deque的push（）跟offer（）方法一样，pop（）跟po]]></description>
 </item></channel>
 </rss>
