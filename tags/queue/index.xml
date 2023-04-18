@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Queue - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/queue/</link>
+        <description>Queue - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/queue/" rel="self" type="application/rss+xml" /><item>
+    <title>Java集合详解</title>
+    <link>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
+    <description><![CDATA[Java集合详解 架构图 集合的简单分类1.collection: List接口：一种有序列表的集合，例如，按索引排列的Student的List；]]></description>
+</item></channel>
+</rss>

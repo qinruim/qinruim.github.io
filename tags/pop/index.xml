@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pop - 标签 - qinruim的笔记本</title>
+        <link>https://qinruim.github.io/tags/pop/</link>
+        <description>pop - 标签 - qinruim的笔记本</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/pop/" rel="self" type="application/rss+xml" /><item>
+    <title>push()、pop()、offer()、poll()、add()</title>
+    <link>https://qinruim.github.io/pushpopofferpolladd/</link>
+    <pubDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/pushpopofferpolladd/</guid>
+    <description><![CDATA[push()、pop()、offer()、poll()、add()以前以为Deque的push（）跟offer（）方法一样，pop（）跟po]]></description>
+</item></channel>
+</rss>

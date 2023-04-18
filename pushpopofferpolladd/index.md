@@ -1,4 +1,4 @@
-# 
+# push()、pop()、offer()、poll()、add()
 
 # push()、pop()、offer()、poll()、add()
 

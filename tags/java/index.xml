@@ -4,7 +4,21 @@
         <link>https://qinruim.github.io/tags/java/</link>
         <description>java - 标签 - qinruim的笔记本</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
-            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Sat, 11 Mar 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Java集合详解</title>
+    <link>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
+    <pubDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</guid>
+    <description><![CDATA[Java集合详解 架构图 集合的简单分类1.collection: List接口：一种有序列表的集合，例如，按索引排列的Student的List；]]></description>
+</item><item>
+    <title>push()、pop()、offer()、poll()、add()</title>
+    <link>https://qinruim.github.io/pushpopofferpolladd/</link>
+    <pubDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/pushpopofferpolladd/</guid>
+    <description><![CDATA[push()、pop()、offer()、poll()、add()以前以为Deque的push（）跟offer（）方法一样，pop（）跟po]]></description>
+</item><item>
     <title>nginx小坑</title>
     <link>https://qinruim.github.io/nginx%E5%B0%8F%E8%AE%B0/</link>
     <pubDate>Sat, 11 Mar 2023 16:29:09 &#43;0800</pubDate><author>

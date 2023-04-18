@@ -5,22 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noodp" />
-    <title> - qinruim的笔记本</title><meta name="Description" content="We will..."><meta property="og:title" content="" />
-<meta property="og:description" content="Java集合详解 架构图 集合的简单分类1.collection: List接口：一种有序列表的集合，例如，按索引排列的Student的List；" />
+    <title>Java集合详解 - qinruim的笔记本</title><meta name="Description" content="Java集合详解"><meta property="og:title" content="Java集合详解" />
+<meta property="og:description" content="Java集合详解" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><meta property="og:image" content="https://qinruim.github.io/images/paqia.jpg"/><meta property="article:section" content="posts" />
-
-<meta property="og:site_name" content="qinruim的笔记本" />
+<meta property="article:published_time" content="2023-04-11T16:29:09+08:00" />
+<meta property="article:modified_time" content="2023-04-11T16:29:09+08:00" /><meta property="og:site_name" content="qinruim的笔记本" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://qinruim.github.io/images/paqia.jpg"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="Java集合详解 架构图 集合的简单分类1.collection: List接口：一种有序列表的集合，例如，按索引排列的Student的List；"/>
+<meta name="twitter:title" content="Java集合详解"/>
+<meta name="twitter:description" content="Java集合详解"/>
 <meta name="application-name" content="qinruim的笔记本">
 <meta name="apple-mobile-web-app-title" content="qinruim的笔记本">
 
-<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/paqia.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><link rel="prev" href="https://qinruim.github.io/pushpopofferpolladd/" /><link rel="next" href="https://qinruim.github.io/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/paqia.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><link rel="prev" href="https://qinruim.github.io/pushpopofferpolladd/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript>
     
@@ -30,18 +30,18 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "",
+        "headline": "Java集合详解",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/qinruim.github.io\/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3\/"
-        },"genre": "posts","wordcount":  2788 ,
-        "url": "https:\/\/qinruim.github.io\/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3\/","publisher": {
+        },"genre": "posts","keywords": "java, List, Collection, Map, Set, Queue, 迭代器","wordcount":  2788 ,
+        "url": "https:\/\/qinruim.github.io\/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3\/","datePublished": "2023-04-11T16:29:09+08:00","dateModified": "2023-04-11T16:29:09+08:00","publisher": {
             "@type": "Organization",
             "name": "qinruim"},"author": {
                 "@type": "Person",
                 "name": "qinruim"
-            },"description": ""
+            },"description": "Java集合详解"
     }
     </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
 </head>
@@ -137,11 +137,11 @@
     <li><a href="#集合与数组的区别">集合与数组的区别</a></li>
   </ul>
 </nav></div>
-    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java集合详解</h1><div class="post-meta">
             <div class="post-meta-line">
                 <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">qinruim</a>
-                </span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2788 字&nbsp;
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/java%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>java学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-11">2023-04-11</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-04-11">2023-04-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2788 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -582,7 +582,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 0001-01-01</span>
+                <span>更新于 2023-04-11</span>
             </div>
             <div class="post-info-license"></div>
         </div>
@@ -596,14 +596,13 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/list/">List</a>,&nbsp;<a href="/tags/collection/">Collection</a>,&nbsp;<a href="/tags/map/">Map</a>,&nbsp;<a href="/tags/set/">Set</a>,&nbsp;<a href="/tags/queue/">Queue</a>,&nbsp;<a href="/tags/%E8%BF%AD%E4%BB%A3%E5%99%A8/">迭代器</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/pushpopofferpolladd/" class="prev" rel="prev" title=""><i class="fas fa-angle-left fa-fw"></i></a>
-            <a href="/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%B9%B6%E9%83%A8%E7%BD%B2/" class="next" rel="next" title="使用Hugo搭建博客并部署">使用Hugo搭建博客并部署<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/pushpopofferpolladd/" class="prev" rel="prev" title="push()、pop()、offer()、poll()、add()"><i class="fas fa-angle-left fa-fw"></i>push()、pop()、offer()、poll()、add()</a></div>
 </div>
 </article></div>
         </main><footer class="footer">
