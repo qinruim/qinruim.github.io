@@ -1,5 +1,7 @@
 # push()、pop()、offer()、poll()、add()
 
+
+
 # push()、pop()、offer()、poll()、add()
 
 以前以为Deque的push（）跟offer（）方法一样，pop（）跟poll（）方法一样，没有太关注过其具体实现。

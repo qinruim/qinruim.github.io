@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title>ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作 - qinruim的笔记本</title><meta name="Description" content="ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作"><meta property="og:title" content="ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作" />
+<meta property="og:description" content="ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qinruim.github.io/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C/" /><meta property="og:image" content="https://qinruim.github.io/images/paqia.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-21T23:29:09+08:00" />
+<meta property="article:modified_time" content="2023-04-21T23:29:09+08:00" /><meta property="og:site_name" content="qinruim的笔记本" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://qinruim.github.io/images/paqia.jpg"/>
+
+<meta name="twitter:title" content="ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作"/>
+<meta name="twitter:description" content="ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作"/>
+<meta name="application-name" content="qinruim的笔记本">
+<meta name="apple-mobile-web-app-title" content="qinruim的笔记本">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/images/paqia.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qinruim.github.io/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C/" /><link rel="prev" href="https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/color.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript>
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/qinruim.github.io\/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C\/"
+        },"genre": "posts","keywords": "java, JVM","wordcount":  341 ,
+        "url": "https:\/\/qinruim.github.io\/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C\/","datePublished": "2023-04-21T23:29:09+08:00","dateModified": "2023-04-21T23:29:09+08:00","publisher": {
+            "@type": "Organization",
+            "name": "qinruim"},"author": {
+                "@type": "Person",
+                "name": "qinruim"
+            },"description": "ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作"
+    }
+    </script><script src="//instant.page/5.1.1" defer type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme); document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="qinruim的笔记本"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><a href="#" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="qinruim的笔记本"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="#" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents"></nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">qinruim</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/java%E5%AD%A6%E4%B9%A0/"><i class="far fa-folder fa-fw"></i>java学习</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-04-21">2023-04-21</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2023-04-21">2023-04-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 341 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><h1 id="error-ptraceptrace_attach--failed-for-211581-不允许的操作" class="headerLink">
+    <a href="#error-ptraceptrace_attach--failed-for-211581-%e4%b8%8d%e5%85%81%e8%ae%b8%e7%9a%84%e6%93%8d%e4%bd%9c" class="header-mark"></a>ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作</h1><p>在查看JVM参数时，输入如下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">jinfo -flags <span class="m">212503</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>错误信息如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">Attaching to process ID 212503, please wait...
+</span></span><span class="line"><span class="cl">ERROR: ptrace<span class="o">(</span>PTRACE_ATTACH, ..<span class="o">)</span> failed <span class="k">for</span> 212503: 不允许的操作
+</span></span><span class="line"><span class="cl">Error attaching to process: sun.jvm.hotspot.debugger.DebuggerException: Can<span class="s1">&#39;t attach to the process: ptrace(PTRACE_ATTACH, ..) failed for 212503: 不允许的操作
+</span></span></span><span class="line"><span class="cl"><span class="s1">sun.jvm.hotspot.debugger.DebuggerException: sun.jvm.hotspot.debugger.DebuggerException: Can&#39;</span>t attach to the process: ptrace<span class="o">(</span>PTRACE_ATTACH, ..<span class="o">)</span> failed <span class="k">for</span> 212503: 不允许的操作
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal<span class="nv">$LinuxDebuggerLocalWorkerThread</span>.execute<span class="o">(</span>LinuxDebuggerLocal.java:163<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach<span class="o">(</span>LinuxDebuggerLocal.java:278<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.HotSpotAgent.attachDebugger<span class="o">(</span>HotSpotAgent.java:674<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.HotSpotAgent.setupDebuggerLinux<span class="o">(</span>HotSpotAgent.java:612<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.HotSpotAgent.setupDebugger<span class="o">(</span>HotSpotAgent.java:338<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.HotSpotAgent.go<span class="o">(</span>HotSpotAgent.java:305<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.HotSpotAgent.attach<span class="o">(</span>HotSpotAgent.java:141<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.tools.Tool.start<span class="o">(</span>Tool.java:185<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.tools.Tool.execute<span class="o">(</span>Tool.java:118<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.tools.JInfo.main<span class="o">(</span>JInfo.java:138<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeMethodAccessorImpl.invoke0<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.NativeMethodAccessorImpl.invoke<span class="o">(</span>NativeMethodAccessorImpl.java:62<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.reflect.DelegatingMethodAccessorImpl.invoke<span class="o">(</span>DelegatingMethodAccessorImpl.java:43<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at java.lang.reflect.Method.invoke<span class="o">(</span>Method.java:498<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.tools.jinfo.JInfo.runTool<span class="o">(</span>JInfo.java:108<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.tools.jinfo.JInfo.main<span class="o">(</span>JInfo.java:76<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Caused by: sun.jvm.hotspot.debugger.DebuggerException: Can<span class="err">&#39;</span>t attach to the process: ptrace<span class="o">(</span>PTRACE_ATTACH, ..<span class="o">)</span> failed <span class="k">for</span> 212503: 不允许的操作
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.attach0<span class="o">(</span>Native Method<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal.access<span class="nv">$100</span><span class="o">(</span>LinuxDebuggerLocal.java:62<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal<span class="nv">$1</span>AttachTask.doit<span class="o">(</span>LinuxDebuggerLocal.java:269<span class="o">)</span>
+</span></span><span class="line"><span class="cl">        at sun.jvm.hotspot.debugger.linux.LinuxDebuggerLocal<span class="nv">$LinuxDebuggerLocalWorkerThread</span>.run<span class="o">(</span>LinuxDebuggerLocal.java:138<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>原因：</p>
+<p>新版的Linux系统加入了 <code>ptrace-scope</code> 机制,该机制的目的是防止用户访问正在执行的进程的内存，但是如jinfo,jmap这些调试类工具本身就是利用<code>ptrace来获取执行进程的内存等信息。</code></p>
+<p>解决方案：</p>
+<p>关闭ptrace-scope防护</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">//临时修改
+</span></span><span class="line"><span class="cl">sudo sysctl -w kernel/yama/ptrace_scope<span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//永久修改
+</span></span><span class="line"><span class="cl">sudo vim /etc/sysctl.d/10-ptrace.conf 
+</span></span><span class="line"><span class="cl">	// <span class="m">1</span>  修改为 <span class="m">0</span>
+</span></span><span class="line"><span class="cl">kernel.yama.ptrace_scope <span class="o">=</span> <span class="m">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>本次错误记录到此为止。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-04-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">java</a>,&nbsp;<a href="/tags/jvm/">JVM</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/" class="prev" rel="prev" title="Java集合详解"><i class="fas fa-angle-left fa-fw"></i>Java集合详解</a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.102.3">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.3.0"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">qinruim</a></span>&nbsp;|&nbsp;<span class="license">本博客所有文章除特別声明外，均采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"> CC BY-SA 4.0 </a> 许可协议，转载请注明出处。</span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div><script>
+                    if('serviceWorker' in navigator) {
+                        navigator.serviceWorker
+                            .register('/sw.min.js', { scope: '/' })
+                            .then(function(registration) {
+                            });
+                
+                        navigator.serviceWorker
+                            .ready
+                            .then(function(registration) {
+                            });
+                    }
+                </script></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+        <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":42},"comment":{},"data":{"desktop-header-typeit":"qinruim的笔记本","mobile-header-typeit":"qinruim的笔记本"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"typeit":{"cursorChar":null,"cursorSpeed":null,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":null,"speed":null}};</script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js" defer></script><script type="text/javascript" src="/lib/katex/auto-render.min.js" defer></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js" defer></script><script type="text/javascript" src="/lib/katex/mhchem.min.js" defer></script><script type="text/javascript" src="/js/katex.min.js" defer></script><script type="text/javascript" src="/js/theme.min.js" defer></script></div>
+</body>
+
+</html>

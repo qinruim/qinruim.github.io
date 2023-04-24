@@ -4,7 +4,14 @@
         <link>https://qinruim.github.io/posts/</link>
         <description>所有文章 | qinruim的笔记本</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>mqinrui@163.com (qinruim)</managingEditor>
-            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>mqinrui@163.com (qinruim)</webMaster><lastBuildDate>Fri, 21 Apr 2023 23:29:09 &#43;0800</lastBuildDate><atom:link href="https://qinruim.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作</title>
+    <link>https://qinruim.github.io/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Fri, 21 Apr 2023 23:29:09 &#43;0800</pubDate><author>
+        <name>qinruim</name>
+    </author><guid>https://qinruim.github.io/error-ptraceptrace_attach-..-failed-for-211581-%E4%B8%8D%E5%85%81%E8%AE%B8%E7%9A%84%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[ERROR: ptrace(PTRACE_ATTACH, ..) failed for 211581: 不允许的操作在查看JVM参数时，输入如下命令： 1 jinfo -flags 212503 错误信息如下： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 Attaching to process ID 212503,]]></description>
+</item><item>
     <title>Java集合详解</title>
     <link>https://qinruim.github.io/java%E9%9B%86%E5%90%88%E8%AF%A6%E8%A7%A3/</link>
     <pubDate>Tue, 11 Apr 2023 16:29:09 &#43;0800</pubDate><author>
